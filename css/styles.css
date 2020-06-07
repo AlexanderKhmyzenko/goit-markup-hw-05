@@ -135,6 +135,10 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -179,6 +183,10 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .communication .link:hover,
 .communication .link:focus {
@@ -423,6 +431,11 @@ a {
   border-radius: 50%;
   margin-right: 10px;
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-list-icon-link:hover,
 .team-list-icon-link:focus {
@@ -460,6 +473,10 @@ a {
   width: 170px;
   height: 90px;
   fill: #afb1b8;
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-list-link:hover,
 .customers-list-link:focus {
@@ -533,6 +550,10 @@ a {
   background: var(--section-bg-color);
   border: none;
   border-radius: 4px;
+
+  transition-property: color, background, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-button:hover,
 .portfolio-list-button:focus {
@@ -540,7 +561,6 @@ a {
   background: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
 }
 .portfolio-projectslist {
   display: flex;
@@ -562,6 +582,10 @@ a {
 .portfolio-projectslist-link {
   display: block;
   border: 1px solid #eeeeee;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-projectslist-link:hover,
 .portfolio-projectslist-link:focus {
@@ -569,20 +593,28 @@ a {
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .portfolio-projectslist-card {
+  overflow: hidden;
   position: relative;
 }
 .portfolio-projectslist-card::before {
   content: "";
   position: absolute;
+  top: 100%;
   width: 100%;
   height: 100%;
+
+  transition-property: background-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-projectslist-item:hover .portfolio-projectslist-card::before {
+.portfolio-projectslist-item:hover .portfolio-projectslist-card::before,
+.portfolio-projectslist-item:focus .portfolio-projectslist-card::before {
   background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(-100%);
 }
 .portfolio-projectlist-text {
   position: absolute;
-  top: 63px;
+  top: 100%;
   left: 24px;
   opacity: 0;
   width: 322px;
@@ -596,9 +628,15 @@ a {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--other-text-color);
+
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-projectslist-item:hover .portfolio-projectlist-text {
+.portfolio-projectslist-item:hover .portfolio-projectlist-text,
+.portfolio-projectslist-item:focus .portfolio-projectlist-text {
   opacity: 1;
+  transform: translateY(-231px);
 }
 .portfolio-projectslist-frame {
   background-color: var(--primary-bg-color);
@@ -707,6 +745,10 @@ a {
   background-position: center;
   border-radius: 50%;
   margin-right: 10px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-media-list-link:hover,
 .footer-social-media-list-link:focus {
