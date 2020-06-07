@@ -140,8 +140,19 @@ a {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
-.site-nav .link.current {
+.site-nav .current {
+  position: relative;
   color: var(--accent-color);
+}
+.site-nav .current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .communication {
@@ -193,6 +204,8 @@ a {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1600px;
   min-width: 1200px;
   background-image: linear-gradient(
@@ -317,12 +330,20 @@ a {
 }
 .item-work {
   border-radius: 4px;
+  position: relative;
 }
 .item-work:nth-child(3n) {
   margin-right: 0;
 }
 .work-list-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
   margin: 0;
+  background: rgba(47, 48, 58, 0.8);
 
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -547,6 +568,38 @@ a {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
+.portfolio-projectslist-card {
+  position: relative;
+}
+.portfolio-projectslist-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-projectslist-item:hover .portfolio-projectslist-card::before {
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.portfolio-projectlist-text {
+  position: absolute;
+  top: 63px;
+  left: 24px;
+  opacity: 0;
+  width: 322px;
+  height: 168px;
+  margin: 0;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--other-text-color);
+}
+.portfolio-projectslist-item:hover .portfolio-projectlist-text {
+  opacity: 1;
+}
 .portfolio-projectslist-frame {
   background-color: var(--primary-bg-color);
 }
@@ -573,17 +626,6 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-}
-.portfolio-projectlist-text {
-  margin: 0;
-
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
