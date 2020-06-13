@@ -721,7 +721,26 @@ a {
 .footer-mail {
   display: inline-block;
   margin-bottom: 9px;
+  color: var(--address-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.footer-mail:hover,
+.footer-mail:focus {
+  color: var(--accent-color);
+}
+.footer-telephone {
+  color: var(--address-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-telephone:hover,
+.footer-telephone:focus {
+  color: var(--accent-color);
+}
+
 .footer-social-media {
   display: inline-block;
   width: 270px;
